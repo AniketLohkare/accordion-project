@@ -17,8 +17,7 @@ Live site: https://basic-accordion-component.netlify.app/
 - CSS
 
 ## Preview
-<!-- Optional GIF -->
-![Accordion Demo](demo.mp4)
+<video src="demo.mp4" width="600" controls></video>
 
 ## How to Use
 Download or clone the repo and open `index.html` in a browser.
