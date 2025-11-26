@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.accordion-container {
+  padding: 16px;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: auto;
+}
+
+.heading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px;
+  margin: 0;
+  border: 1px solid #dfdfdf;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.accordion-1 .heading-icon {
+  border-radius: 4px 4px 0 0;
+}
+
+.accordion-3 .heading-icon {
+  border-radius: 0 0 4px 4px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+}
+
+.heading {
+  margin: 0;
+}
+
+.down-arrow {
+  width: 20px;
+  transition: all 0.25s ease-in-out;
+}
+
+.heading-icon:has(input:checked) {
+  outline: 4px solid #c9dcf7;
+  border-color: #aec7ea;
+  background-color: #e7f1ff;
+  color: #1b69e4;
+}
+
+.heading-icon:has(input:checked) .down-arrow {
+  transform: rotate(-180deg);
+}
+
+.heading-icon:has(input:checked) .down-arrow path {
+  fill: #166ae5;
+}
+
+/* label:has(input:checked) + .description {
+  border-bottom: none;
+} */
+
+.accordion-3:has(input:checked) .heading-icon {
+  border-radius: 0;
+}
+
+.accordion-3:has(input:checked) .description {
+  border-radius: 0 0 4px 4px;
+}
+
+.description {
+  border: 1px solid #dfdfdf;
+  border-top: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.45s ease-in-out;
+}
+
+.description p {
+  margin: 0;
+  padding: 16px 16px;
+}
+
+.description p span {
+  color: #d73786;
+}
+
+label:has(input:checked) + .description {
+  max-height: 500px;
+}
